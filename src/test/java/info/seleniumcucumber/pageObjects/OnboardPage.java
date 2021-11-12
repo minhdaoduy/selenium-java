@@ -168,12 +168,12 @@ public class OnboardPage extends AbstractPage {
 
     public void inputDetailServices(String detailServices) throws NoSuchFieldException
     {
-        inputObj.enterText(txtDetailServices,"test test test test test test test test test test test");
+        inputObj.enterText(txtDetailServices,detailServices);
     }
 
     public void inputWebsite(String website) throws NoSuchFieldException
     {
-        inputObj.enterText(txtWebsite,"https://www.google.com/");
+        inputObj.enterText(txtWebsite,website);
     }
 
     public void selectNumberEmployees(String numberEmployees) throws NoSuchFieldException, InterruptedException {
@@ -188,7 +188,7 @@ public class OnboardPage extends AbstractPage {
 
     public void selectTotalSpend(String totalSpend) throws NoSuchFieldException, InterruptedException {
 //        clickObj.click(drlTotalSpend);
-        clickObj.selectOption(drlTotalSpend,"1-5k");
+        clickObj.selectOption(drlTotalSpend,totalSpend);
     }
 
     public void selectKindOfIdentity(String text) throws NoSuchFieldException
