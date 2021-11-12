@@ -134,23 +134,26 @@ public class OnboardPage extends AbstractPage {
 
     public void inputCategory(String category) throws NoSuchFieldException, InterruptedException {
 //        clickObj.click(drlCategory);
-        clickObj.selectOption(txtCategory,"Limited companies");
+        clickObj.selectOption(txtCategory,category);
 //          inputObj.enterText(txtCategory,"Limited companies");
     }
 
     public void selectIndustry(String industry) throws NoSuchFieldException, InterruptedException {
 //        clickObj.click(drlIndustry);
-        clickObj.selectOption(drlIndustry,"Business Services");
+//        clickObj.selectOption(drlIndustry,"Business Services");
+        clickObj.selectOption(drlIndustry,industry);
     }
 
     public void selectEntityType(String entityType) throws NoSuchFieldException, InterruptedException {
 //        clickObj.click(drlEntityType);
-        clickObj.selectOption(drlEntityType,"Limited partnership");
+//        clickObj.selectOption(drlEntityType,"Limited partnership");
+        clickObj.selectOption(drlEntityType,entityType);
     }
 
     public void selectSubIndustry(String subIndustry) throws NoSuchFieldException, InterruptedException {
 //        clickObj.click(drlSubIndustry);
-        clickObj.selectOption(drlSubIndustry,"Holding Companies");
+//        clickObj.selectOption(drlSubIndustry,"Holding Companies");
+        clickObj.selectOption(drlSubIndustry,subIndustry);
     }
 
     public void inputBusinessRegistrationNumber(String businessRegistrationNumber) throws NoSuchFieldException
@@ -160,7 +163,7 @@ public class OnboardPage extends AbstractPage {
 
     public void inputBusinessActivity(String businessActivity) throws NoSuchFieldException
     {
-        inputObj.enterText(txtBusinessActivity,"test test test test test test test test test test test");
+        inputObj.enterText(txtBusinessActivity,businessActivity);
     }
 
     public void inputDetailServices(String detailServices) throws NoSuchFieldException
