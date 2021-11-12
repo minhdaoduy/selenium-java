@@ -38,20 +38,28 @@ public class OnboardNPS extends AbstractPage {
         String personName = RandomStringUtils.randomAlphabetic(8);
         String personPhone = String.valueOf((int)Math.floor(Math.random()*(999999999-100000000+1)+100000000));
         String personEmail = personName+"@gmail.com";
-        String phoneOTPCode = "1234";
-        String emailOTPCode = "1234";
-        String date = "05";
-        String month = "May";
-        int year = 2000;
-        String gender = "05 May 1987";
-        String country = "05 May 1987";
-        String category = "Limited companies";
         Generex generex = new Generex("([0-9]{8,9}[a-zA-Z]{1})");
         String businessRegistrationNumber = generex.getMatchedString((int)Math.floor(Math.random()*(999999999+1)+0));
-        String industry = "Business Services";
-        String entityType = "Limited partnership";
-        String subIndustry = "Holding Companies";
-        String businessActivity = "test test test test test test test test test test test";
+
+        String phoneOTPCode = configFileReader.getPhoneOTPCode();
+        String emailOTPCode = configFileReader.getEmailOTPCode();
+        String date = configFileReader.getDate();
+        String month = configFileReader.getMonth();
+        int year = Integer.parseInt(configFileReader.getYear()) ;
+        String gender = configFileReader.getGender();
+        String country = configFileReader.getCountry();
+        String category = configFileReader.getCategory();
+        String industry = configFileReader.getIndustry();
+        String entityType = configFileReader.getEntityType();
+        String subIndustry = configFileReader.getSubIndustry();
+        String businessActivity = configFileReader.getBusinessActivity();
+        String website = configFileReader.getWebsite();
+        String totalSpend = configFileReader.getTotalSpend();
+        String kindOfIdentity = configFileReader.getKindOfIdentity();
+        String kindOfIdentity2 = configFileReader.getKindOfIdentity2();
+
+
+
 
         registration.navigateToRegistrationPage();
 
@@ -85,17 +93,17 @@ public class OnboardNPS extends AbstractPage {
         onboardPage.selectSubIndustry(subIndustry);
         onboardPage.clickContinue();
 
-        onboardPage.selectTotalSpend("");
+        onboardPage.selectTotalSpend(totalSpend);
 
         onboardPage.inputBusinessActivity(businessActivity);
-        onboardPage.inputDetailServices("");
-        onboardPage.inputWebsite("");
+        onboardPage.inputDetailServices(businessActivity);
+        onboardPage.inputWebsite(website);
         onboardPage.clickContinue();
 
-        onboardPage.selectKindOfIdentity("Identification number");
+        onboardPage.selectKindOfIdentity(kindOfIdentity);
         onboardPage.clickContinue();
 
-        onboardPage.selectKindOfIdentity("International Passport");
+        onboardPage.selectKindOfIdentity(kindOfIdentity2);
         onboardPage.clickContinue();
 
         onboardPage.openUploadFilePage();
@@ -108,7 +116,7 @@ public class OnboardNPS extends AbstractPage {
     }
 
     @AfterTest
-    public void afterScenario(Scenario scenario) throws IOException {
+    public void afterScenario() {
         getDriver().close();
         getDriver().quit();
     }

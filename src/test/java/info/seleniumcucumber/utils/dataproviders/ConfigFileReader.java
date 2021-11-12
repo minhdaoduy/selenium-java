@@ -48,53 +48,6 @@ public class ConfigFileReader {
 		return 30;		
 	}
 
-	public String getHost() {
-		String host = properties.getProperty("Host");
-		if(host != null) return host;
-		else throw new RuntimeException("Host not specified in the Configuration.properties file for the Key:url");
-	}
-
-	public String getDBUrl() {
-		String dbUrl = properties.getProperty("DBUrl");
-		if(dbUrl != null) return dbUrl;
-		else throw new RuntimeException("DBUrl not specified in the Configuration.properties file for the Key:url");
-	}
-
-	public String getDBName() {
-		String dbName = properties.getProperty("DBName");
-		if(dbName != null) return dbName;
-		else throw new RuntimeException("DBName not specified in the Configuration.properties file for the Key:url");
-	}
-
-	public String getDBUserName() {
-		String dbUserName = properties.getProperty("DBUserName");
-		if(dbUserName != null) return dbUserName;
-		else throw new RuntimeException("DBName not specified in the Configuration.properties file for the Key:url");
-	}
-
-	public String getDBPassWord() {
-		String dbPassWord = properties.getProperty("DBPassWord");
-		if(dbPassWord != null) return dbPassWord;
-		else throw new RuntimeException("DBName not specified in the Configuration.properties file for the Key:url");
-	}
-	
-	public String getWordPressApplicationUrl() {
-		String url = properties.getProperty("wordpressurl");
-		if(url != null) return url;
-		else throw new RuntimeException("WordPress Url not specified in the Configuration.properties file for the Key:url");
-	}
-	
-	public String getAPApplicationUrl() {
-		String url = properties.getProperty("automationstoreurl");
-		if(url != null) return url;
-		else throw new RuntimeException("Application Url not specified in the Configuration.properties file for the Key:url");
-	}
-
-	public String getBaseUrl() {
-		String url = properties.getProperty("baseURL");
-		if(url != null) return url;
-		else throw new RuntimeException("Application Url not specified in the Configuration.properties file for the Key:url");
-	}
 
 	public String getRegisterURL() {
 		String url = properties.getProperty("registerURL");
@@ -102,12 +55,6 @@ public class ConfigFileReader {
 		else throw new RuntimeException("Application Url not specified in the Configuration.properties file for the Key:url");
 	}
 
-	public String getBaseUrl3() {
-		String url = properties.getProperty("baseURL3");
-		if(url != null) return url;
-		else throw new RuntimeException("baseURL3 not specified in the Configuration.properties file for the Key:url");
-	}
-	
 	public DriverType getBrowser() {
 		String browserName = properties.getProperty("browser");
 		if(browserName == null || browserName.equalsIgnoreCase("chrome")) return DriverType.CHROME;
@@ -128,17 +75,102 @@ public class ConfigFileReader {
 		if(windowSize != null) return Boolean.valueOf(windowSize);
 		return true;
 	}
-	
-	public String getTestDataResourcePath(){
-		String testDataResourcePath = properties.getProperty("testDataResourcePath");
-		if(testDataResourcePath!= null) return testDataResourcePath;
-		else throw new RuntimeException("Test Data Resource Path not specified in the Configuration.properties file for the Key:testDataResourcePath");		
+
+	public String getPhoneOTPCode() {
+		String string = properties.getProperty("phoneOTPCode");
+		if(string != null) return string;
+		else throw new RuntimeException("Application Url not specified in the Configuration.properties file for the Key:url");
+	}
+
+	public String getEmailOTPCode() {
+		String string = properties.getProperty("emailOTPCode");
+		if(string != null) return string;
+		else throw new RuntimeException("Application Url not specified in the Configuration.properties file for the Key:url");
+	}
+
+	public String getDate() {
+		String string = properties.getProperty("date");
+		if(string != null) return string;
+		else throw new RuntimeException("Application Url not specified in the Configuration.properties file for the Key:url");
+	}
+
+	public String getMonth() {
+		String string = properties.getProperty("month");
+		if(string != null) return string;
+		else throw new RuntimeException("Application Url not specified in the Configuration.properties file for the Key:url");
+	}
+
+	public String getYear() {
+		String string = properties.getProperty("year");
+		if(string != null) return string;
+		else throw new RuntimeException("Application Url not specified in the Configuration.properties file for the Key:url");
+	}
+
+	public String getGender() {
+		String string = properties.getProperty("gender");
+		if(string != null) return string;
+		else throw new RuntimeException("Application Url not specified in the Configuration.properties file for the Key:url");
+	}
+
+	public String getCountry() {
+		String string = properties.getProperty("country");
+		if(string != null) return string;
+		else throw new RuntimeException("Application Url not specified in the Configuration.properties file for the Key:url");
+	}
+
+	public String getCategory() {
+		String string = properties.getProperty("category");
+		if(string != null) return string;
+		else throw new RuntimeException("Application Url not specified in the Configuration.properties file for the Key:url");
+	}
+
+	public String getIndustry() {
+		String string = properties.getProperty("industry");
+		if(string != null) return string;
+		else throw new RuntimeException("Application Url not specified in the Configuration.properties file for the Key:url");
+	}
+
+	public String getEntityType() {
+		String string = properties.getProperty("entityType");
+		if(string != null) return string;
+		else throw new RuntimeException("Application Url not specified in the Configuration.properties file for the Key:url");
+	}
+
+	public String getSubIndustry() {
+		String string = properties.getProperty("subIndustry");
+		if(string != null) return string;
+		else throw new RuntimeException("Application Url not specified in the Configuration.properties file for the Key:url");
+	}
+
+	public String getBusinessActivity() {
+		String string = properties.getProperty("businessActivity");
+		if(string != null) return string;
+		else throw new RuntimeException("Application Url not specified in the Configuration.properties file for the Key:url");
+	}
+
+	public String getWebsite() {
+		String string = properties.getProperty("website");
+		if(string != null) return string;
+		else throw new RuntimeException("Application Url not specified in the Configuration.properties file for the Key:url");
+	}
+
+	public String getTotalSpend() {
+		String string = properties.getProperty("totalSpend");
+		if(string != null) return string;
+		else throw new RuntimeException("Application Url not specified in the Configuration.properties file for the Key:url");
+	}
+
+	public String getKindOfIdentity() {
+		String string = properties.getProperty("kindOfIdentity");
+		if(string != null) return string;
+		else throw new RuntimeException("Application Url not specified in the Configuration.properties file for the Key:url");
+	}
+
+	public String getKindOfIdentity2() {
+		String string = properties.getProperty("kindOfIdentity2");
+		if(string != null) return string;
+		else throw new RuntimeException("Application Url not specified in the Configuration.properties file for the Key:url");
 	}
 	
-	public String getReportConfigPath(){
-		String reportConfigPath = properties.getProperty("reportConfigPath");
-		if(reportConfigPath!= null) return reportConfigPath;
-		else throw new RuntimeException("Report Config Path not specified in the Configuration.properties file for the Key:reportConfigPath");		
-	}
 
 }

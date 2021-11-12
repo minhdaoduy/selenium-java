@@ -11,7 +11,8 @@
 Fork / Clone repository from https://github.com/minhdaoduy/selenium-java
 
 ### Run Test
-run with TestRun.xml file
+run with TestRun.xml file by IntelliJ 
+or command: mvn clean test -TestRun=testng.xml
 
 ### Test case
 1. Access Registration Page
